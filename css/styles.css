@@ -303,6 +303,7 @@ button {
 
 /* HERO */
 
+
 .hero {
 	background-color: var(--background);
 	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_mob@1x.png);
@@ -315,7 +316,6 @@ button {
 	margin: 0 auto;
 	
 }
-
 
 @media screen and (max-width:767px) and (min-device-pixel-ratio: 2),
 	(max-width:767px) and (min-resolution: 192dpi),
@@ -764,7 +764,14 @@ button {
 	}
 }
 
-@media screen and (max-width:1199px) {
+@media screen and (max-width: 427px) {
+	.clients-items:not(:last-child) {
+		margin-bottom: 56px;
+	}
+}
+
+
+@media screen and (min-width:428px) and (max-width:1199px) {
 	.clients-items:nth-last-child(n + 4)  {
 		margin-bottom: 56px;
 	}
