@@ -303,21 +303,19 @@ button {
 
 /* HERO */
 
-@media screen and (max-width:767px) {
+.hero {
+	background-color: var(--background);
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_mob@1x.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 100px 0;
+	text-align: center;
+	height: 432px;
+	margin: 0 auto;
 	
-	.hero {
-		background-color: var(--background);
-		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_mob@1x.png);
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		padding: 100px 0;
-		text-align: center;
-		height: 432px;
-		margin: 0 auto;
-	
-	}
 }
+
 
 @media screen and (max-width:767px) and (min-device-pixel-ratio: 2),
 	(max-width:767px) and (min-resolution: 192dpi),
