@@ -303,57 +303,57 @@ button {
 
 /* HERO */
 
-.hero {
-	background-color: var(--background);
-	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_mob@1x.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	padding: 100px 0;
-	text-align: center;
-	height: 432px;
-	margin: 0 auto;
+@media screen and (max-width:767px) {
+	
+	.hero {
+		background-color: var(--background);
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_mob@1x.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		padding: 100px 0;
+		text-align: center;
+		height: 432px;
+		margin: 0 auto;
+	
+	}
 }
 
-
-@media screen and (min-device-pixel-ratio: 2),
-	(min-resolution: 192dpi),
-	(min-resolution: 2dppx) {
+@media screen and (max-width:767px) and (min-device-pixel-ratio: 2),
+	(max-width:767px) and (min-resolution: 192dpi),
+	(max-width:767px) and (min-resolution: 2dppx) {
 	.hero {
-    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero/img_mob@2x.png');
+    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_mob@2x.png);
   }
 }
 
 @media screen and (min-width:768px) {
 	.hero {
-    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero/img_tab@1x.png');
-	}
+    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_tab@1x.png);
+  }
 }
 
 @media screen and (min-width:768px) and (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+	(min-width:768px) and (min-resolution: 192dpi),
+	(min-width:768px) and (min-resolution: 2dppx) {
 	.hero {
-    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero/img_tab@2x.png');
-	}
+    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_tab@2x.png);
+  }
 }
-
 
 @media screen and (min-width:1200px) {
 	.hero {
-    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero/img_desk@1x.png');
-	}
+    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_desk@1x.png);
+  }
 }
 
-@media screen and (min-width:1200px) and  (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+@media screen and (min-width:1200px) and (min-device-pixel-ratio: 2),
+	(min-width:1200px) and (min-resolution: 192dpi),
+	(min-width:1200px) and (min-resolution: 2dppx) {
 	.hero {
-    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero/img_desk@2x.png');
-	}
+    	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/img_desk@2x.png);
+  }
 }
-
-
 
 
 @media screen and (max-width: 1199px) {
@@ -465,6 +465,12 @@ button {
 	text-transform: capitalize;
 	color: var(--h-text);
 	margin-bottom: 8px;
+}
+
+@media screen and (max-width:767px) {
+	.about-title-item {
+		text-align: center;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -1049,7 +1055,7 @@ button {
 	top: 0;
 	left: 0;
 	z-index: var(--idx-backdrop);
-	overflow: scroll;
+	
 
 	width: 100%;
 	height: 100%;
@@ -1059,6 +1065,8 @@ button {
 
 	transition: opacity 150ms linear, visibility 150ms linear;
 }
+
+
 
 .backdrop.is-hidden {
 	opacity: 0;
@@ -1073,13 +1081,32 @@ button {
 	padding: 24px;
 	transform: translateX(-50%) translateY(-50%);
 
-	width: 408px;
+	width: calc(100% - 30px);
 	min-height: 500px;
 
 	background-color: #fcfcfc;
 	border-radius: 10px;
 
 	transition: transform 300ms ease-out;
+	
+}
+
+@media screen and (orientation: landscape) {
+	.backdrop {
+		overflow: auto;
+	}
+
+	.modal {
+		top: 2%;
+		transform: translateX(-50%);
+	}
+}
+
+
+@media screen and (min-width:428px) {
+	.modal {
+		width: 408px;
+	}
 }
 
 .backdrop.is-hidden .modal {
@@ -1087,7 +1114,7 @@ button {
 }
 
 .close-btn {
-	margin-left: 336px;
+	margin-left: calc(100% - 30px);;
 	margin-bottom: 10px;
 
 	display: flex;
